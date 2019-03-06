@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+umask "${UMASK}"
+
+exec s6-setuidgid hotio "${APP_DIR}/nzbget" --server --option OutputMode=log --configfile "${CONFIG_DIR}/app/nzbget.conf"
