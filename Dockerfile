@@ -12,4 +12,3 @@ RUN runfile="/tmp/app.run" && curl -fsSL -o "${runfile}" "https://github.com/nzb
     chmod -R u=rwX,go=rX "${APP_DIR}"
 
 COPY root/ /
-
