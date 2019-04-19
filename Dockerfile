@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND="noninteractive"
 
 ENV APP="NZBGet"
 EXPOSE 6789
-HEALTHCHECK --interval=60s CMD curl -fsSL http://localhost:6789/jsonrpc || exit 1
+HEALTHCHECK --interval=60s CMD curl -fsSL http://localhost:6789 || exit 1
 
 # install app
 # https://github.com/nzbget/nzbget/releases
