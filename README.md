@@ -116,3 +116,15 @@ cap_add:
 devices:
   - /dev/fuse
 ```
+
+## Execute scripts at startup
+
+If you need additional dependencies for your pp-scripts, you can install these by placing your script in the folder `/config/scripts.d`, an example script can be seen below.
+
+```shell
+#!/bin/bash
+
+apt update
+apt install -y --no-install-recommends --no-install-suggests python-pip python-setuptools ffmpeg
+pip --no-cache-dir install requests requests[security] requests-cache babelfish stevedore==1.19.1 python-dateutil deluge-client qtfaststart "guessit<2" "subliminal<2"
+```
