@@ -3,4 +3,4 @@
 
 umask "${UMASK}"
 
-exec s6-setuidgid hotio "${APP_DIR}/nzbget" --server --option OutputMode=log --configfile "${CONFIG_DIR}/app/nzbget.conf"
+exec s6-setuidgid hotio "${APP_DIR}/nzbget" --server --option OutputMode=log --configfile "${CONFIG_DIR}/app/nzbget.conf" > /dev/null 2>&1
