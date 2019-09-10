@@ -1,7 +1,8 @@
-# [docker-nzbget](https://github.com/hotio/docker-nzbget)
+# nzbget
 
-![Docker Pulls](https://img.shields.io/docker/pulls/hotio/nzbget?style=flat-square)
-![Drone (cloud)](https://img.shields.io/drone/build/hotio/docker-nzbget?style=flat-square)
+[![GitHub](https://img.shields.io/badge/source-github-lightgrey?style=flat-square)](https://github.com/hotio/docker-nzbget)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hotio/nzbget?style=flat-square)](https://hub.docker.com/r/hotio/nzbget)
+[![Drone (cloud)](https://img.shields.io/drone/build/hotio/docker-nzbget?style=flat-square)](https://cloud.drone.io/hotio/docker-nzbget)
 
 ## Donations
 
