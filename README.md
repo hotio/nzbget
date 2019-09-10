@@ -1,8 +1,7 @@
-# [NZBGet](https://github.com/nzbget/nzbget)
+# [docker-nzbget](https://github.com/hotio/docker-nzbget)
 
-[![badge](https://images.microbadger.com/badges/image/hotio/nzbget.svg)](https://microbadger.com/images/hotio/nzbget "Get your own image badge on microbadger.com")
-[![badge](https://images.microbadger.com/badges/version/hotio/nzbget.svg)](https://microbadger.com/images/hotio/nzbget "Get your own version badge on microbadger.com")
-[![badge](https://images.microbadger.com/badges/commit/hotio/nzbget.svg)](https://microbadger.com/images/hotio/nzbget "Get your own commit badge on microbadger.com")
+![Docker Pulls](https://img.shields.io/docker/pulls/hotio/nzbget?style=flat-square)
+![Drone (cloud)](https://img.shields.io/drone/build/hotio/docker-nzbget?style=flat-square)
 
 ## Donations
 
