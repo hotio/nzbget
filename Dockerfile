@@ -1,11 +1,7 @@
 FROM hotio/base
 
 ARG DEBIAN_FRONTEND="noninteractive"
-ARG COMMIT
-ARG TAG
 
-ENV COMMIT="${COMMIT}" TAG="${TAG}"
-ENV APP="NZBGet"
 EXPOSE 6789
 HEALTHCHECK --interval=60s CMD curl -fsSL http://localhost:6789 || exit 1
 
@@ -15,3 +11,9 @@ RUN runfile="/tmp/app.run" && curl -fsSL -o "${runfile}" "https://github.com/nzb
     chmod -R u=rwX,go=rX "${APP_DIR}"
 
 COPY root/ /
+
+ARG COMMIT
+ARG TAG
+ARG APP
+
+ENV COMMIT="${COMMIT}" TAG="${TAG}" APP="${APP}"
