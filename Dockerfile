@@ -12,8 +12,5 @@ RUN runfile="/tmp/app.run" && curl -fsSL -o "${runfile}" "https://github.com/nzb
 
 COPY root/ /
 
-ARG COMMIT
 ARG TAG
-ARG APP
-
-ENV COMMIT="${COMMIT}" TAG="${TAG}" APP="${APP}"
+ENV TAG="${TAG}"
