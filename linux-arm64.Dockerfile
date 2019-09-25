@@ -4,7 +4,6 @@ FROM hotio/base:${BRANCH}
 ARG DEBIAN_FRONTEND="noninteractive"
 
 EXPOSE 6789
-HEALTHCHECK --interval=60s CMD curl -fsSL http://localhost:6789 || exit 1
 
 COPY root/ /
 
