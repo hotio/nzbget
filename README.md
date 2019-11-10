@@ -18,18 +18,17 @@ The environment variables below are all optional, the values you see are the def
 -e PUID=1000
 -e PGID=1000
 -e UMASK=022
--e VERSION=image
 ```
 
-Possible values for `VERSION`:
+## Tags
 
-```shell
-VERSION=image
-VERSION=stable
-VERSION=unstable
-VERSION=https://github.com/nzbget/nzbget/releases/download/v20.0/nzbget-20.0-bin-linux.run
-VERSION=file:///config/nzbget-20.0-bin-linux.run
-```
+| Tag      | Description                    |
+| ---------|--------------------------------|
+| latest   | Stable version                 |
+| master   | Stable version                 |
+| unstable | Unstable version, pre-releases |
+
+You can also find tags that reference a commit or version number.
 
 ## Executing your own scripts
 
