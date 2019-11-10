@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###################
-version=$(curl -fsSL "https://api.github.com/repos/nzbget/nzbget/releases/latest" | jq -r .tag_name | sed s/v//g)
+version=$(curl -fsSL "https://api.github.com/repos/nzbget/nzbget/releases" | jq -r .[0].name | sed s/v//g)
 app=NZBGET
 ###################
 
