@@ -1,8 +1,7 @@
 # nzbget
 
-[![GitHub](https://img.shields.io/badge/source-github-lightgrey?style=flat-square)](https://github.com/hotio/docker-nzbget)
-[![Docker Pulls](https://img.shields.io/docker/pulls/hotio/nzbget?style=flat-square)](https://hub.docker.com/r/hotio/nzbget)
-[![Drone (cloud)](https://img.shields.io/drone/build/hotio/docker-nzbget?style=flat-square)](https://cloud.drone.io/hotio/docker-nzbget)
+[![GitHub](https://img.shields.io/badge/source-github-lightgrey)](https://github.com/hotio/docker-nzbget)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hotio/nzbget)](https://hub.docker.com/r/hotio/nzbget)
 
 ## Starting the container
 
@@ -22,11 +21,11 @@ The environment variables below are all optional, the values you see are the def
 
 ## Tags
 
-| Tag      | Description                    |
-| ---------|--------------------------------|
-| latest   | The same as `stable`           |
-| stable   | Stable version                 |
-| unstable | Unstable version, pre-releases |
+| Tag      | Description                    | Build Status                                                                                                                                                |
+| ---------|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| latest   | The same as `stable`           |                                                                                                                                                             |
+| stable   | Stable version                 | [![Build Status](https://cloud.drone.io/api/badges/hotio/docker-nzbget/status.svg?ref=refs/heads/stable)](https://cloud.drone.io/hotio/docker-nzbget)   |
+| unstable | Unstable version, pre-releases | [![Build Status](https://cloud.drone.io/api/badges/hotio/docker-nzbget/status.svg?ref=refs/heads/unstable)](https://cloud.drone.io/hotio/docker-nzbget) |
 
 You can also find tags that reference a commit or version number.
 
