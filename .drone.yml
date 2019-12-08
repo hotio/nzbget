@@ -310,9 +310,6 @@ depends_on:
 kind: pipeline
 name: screenshot
 
-clone:
-  disable: true
-
 platform:
   os: linux
   arch: amd64
