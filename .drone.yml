@@ -305,3 +305,37 @@ steps:
 
 depends_on:
   - manifest
+
+---
+kind: pipeline
+name: screenshot
+
+clone:
+  disable: true
+
+platform:
+  os: linux
+  arch: amd64
+
+trigger:
+  event:
+    - push
+
+steps:
+- name: screenshot
+  image: zenika/alpine-chrome
+  pull: always
+  commands:
+    - sleep 60
+    - chromium-browser --headless --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage --no-sandbox --screenshot=output.png --hide-scrollbars --window-size=1920,1080 http://nzbget:tegbzn6789@service:6789
+    - wget --method PUT --body-file=output.png https://transfer.sh/${DRONE_REPO_NAME##docker-}_${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}.png -O - -nv
+
+services:
+- name: service
+  image: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME##docker-}:${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+  pull: always
+
+depends_on:
+  - linux-amd64-test
+  - linux-arm64-test
+  - linux-arm-test
