@@ -325,6 +325,7 @@ steps:
 - name: screenshot
   image: zenika/alpine-chrome
   pull: always
+  user: root
   commands:
     - apk add --no-cache curl@edge
     - sleep 50
