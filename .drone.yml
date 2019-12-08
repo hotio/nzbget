@@ -326,9 +326,10 @@ steps:
   image: zenika/alpine-chrome
   pull: always
   commands:
-    - sleep 60
+    - apk add --no-cache curl@edge
+    - sleep 50
     - chromium-browser --headless --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage --no-sandbox --screenshot=/tmp/output.png --hide-scrollbars --window-size=1920,1080 http://nzbget:tegbzn6789@service:6789
-    - wget --method PUT --body-file=/tmp/output.png https://transfer.sh/${DRONE_REPO_NAME##docker-}_${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}.png -O - -nv
+    - curl --upload-file /tmp/output.png https://transfer.sh/${DRONE_REPO_NAME##docker-}_${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}.png
 
 services:
 - name: service
