@@ -7,7 +7,6 @@ rm -f "${CONFIG_DIR}/app/nzbget.lock"
 if [[ ! -f "${CONFIG_DIR}/app/nzbget.conf" ]]; then
     sed -e "s#\\(MainDir=\\).*#\\1${CONFIG_DIR}/app/downloads#g" \
         -e "s#\\(QueueDir=\\).*#\\1${CONFIG_DIR}/app/queue#g" \
-        -e "s#\\(TempDir=\\).*#\\1${CONFIG_DIR}/app/tmp#g" \
         -e "s#\\(LockFile=\\).*#\\1${CONFIG_DIR}/app/nzbget.lock#g" \
         -e "s#\\(LogFile=\\).*#\\1${CONFIG_DIR}/app/nzbget.log#g" \
         "${APP_DIR}/nzbget.conf" > "${CONFIG_DIR}/app/nzbget.conf"
