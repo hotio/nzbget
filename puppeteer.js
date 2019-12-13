@@ -14,7 +14,7 @@ const puppeteer = require("puppeteer");
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1920, height: 1080 });
-  await page.goto("http://nzbget:tegbzn6789@service:6789", { waitUntil: "networkidle0" });
+  await page.goto("http://nzbget:tegbzn6789@service:6789", { waitUntil: "networkidle2" });
   await page.screenshot({ path: "/tmp/screenshot.png", fullPage: true });
   await browser.close();
 })();
