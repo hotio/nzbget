@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ ${1} == "screenshot" ]]; then
-    SERVICE_IP="http://nzbget:tegbzn6789@$(dig +short service):6767"
+    SERVICE_IP="http://nzbget:tegbzn6789@$(dig +short service):6789"
     NETWORK_IDLE="2"
     cd /usr/src/app && node <<EOF
 const puppeteer = require('puppeteer');
@@ -33,9 +33,9 @@ const puppeteer = require('puppeteer');
 EOF
     curl -fsSL -F'file=@/drone/src/screenshot.png' https://0x0.st > "/drone/src/screenshot.log"
 elif [[ ${1} == "checkservice" ]]; then
-    SERVICE="service:6767"
-    currenttime=$(date +%s); maxtime=$((currenttime+60)); while (! curl -fsSL nzbget:tegbzn6789@${SERVICE} > /dev/null) && [[ "$currenttime" -lt "$maxtime" ]]; do sleep 1; currenttime=$(date +%s); done
-    curl -fsSL nzbget:tegbzn6789@${SERVICE} > /dev/null
+    SERVICE="http://nzbget:tegbzn6789@service:6789"
+    currenttime=$(date +%s); maxtime=$((currenttime+60)); while (! curl -fsSL ${SERVICE} > /dev/null) && [[ "$currenttime" -lt "$maxtime" ]]; do sleep 1; currenttime=$(date +%s); done
+    curl -fsSL ${SERVICE} > /dev/null
 else
     version=$(curl -fsSL "https://api.github.com/repos/nzbget/nzbget/releases" | jq -r .[0].name | sed s/v//g)
     [[ -z ${version} ]] && exit
