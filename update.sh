@@ -33,7 +33,7 @@ const puppeteer = require('puppeteer');
 EOF
     curl -fsSL -F'file=@/drone/src/screenshot.png' https://0x0.st > "/drone/src/screenshot.log"
 elif [[ ${1} == "checkservice" ]]; then
-    SERVICE="http://nzbget:tegbzn6789@service:6767"
+    SERVICE="nzbget:tegbzn6789@service:6767"
     currenttime=$(date +%s); maxtime=$((currenttime+60)); while (! curl -fsSL ${SERVICE} > /dev/null) && [[ "$currenttime" -lt "$maxtime" ]]; do sleep 1; currenttime=$(date +%s); done
     curl -fsSL ${SERVICE} > /dev/null
 else
