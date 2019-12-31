@@ -9,7 +9,7 @@
 Just the basics to get the container running:
 
 ```shell
-docker run --rm --name nzbget -p 6789:6789 -v /<host_folder>:/config hotio/nzbget
+docker run --rm --name nzbget -p 6789:6789 -v /<host_folder_config>:/config hotio/nzbget
 ```
 
 The environment variables below are all optional, the values you see are the defaults.
