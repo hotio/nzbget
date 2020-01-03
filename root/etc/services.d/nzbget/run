@@ -11,4 +11,5 @@ redirect_cmd() {
     fi
 }
 
-redirect_cmd exec s6-setuidgid hotio "${APP_DIR}/nzbget" --server --option OutputMode=log --configfile "${CONFIG_DIR}/app/nzbget.conf"
+# shellcheck disable=SC2086
+redirect_cmd exec s6-setuidgid hotio "${APP_DIR}/nzbget" --server --option OutputMode=log --configfile "${CONFIG_DIR}/app/nzbget.conf" ${ARGS}
