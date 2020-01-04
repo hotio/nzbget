@@ -4,16 +4,6 @@ ARG DEBIAN_FRONTEND="noninteractive"
 
 EXPOSE 6789
 
-# install packages
-RUN apt update && \
-    apt install -y --no-install-recommends --no-install-suggests \
-        python && \
-# clean up
-    apt autoremove -y && \
-    apt clean && \
-    rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
-
-# https://github.com/nzbget/nzbget/releases
 ARG NZBGET_VERSION=21.0
 
 # install app

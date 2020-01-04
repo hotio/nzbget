@@ -9,6 +9,7 @@ if [[ ! -f "${CONFIG_DIR}/app/nzbget.conf" ]]; then
         -e "s#\\(QueueDir=\\).*#\\1${CONFIG_DIR}/app/queue#g" \
         -e "s#\\(LockFile=\\).*#\\1${CONFIG_DIR}/app/nzbget.lock#g" \
         -e "s#\\(LogFile=\\).*#\\1${CONFIG_DIR}/app/nzbget.log#g" \
+        -e "s#\\(ShellOverride=\\).*#\\1.py=/usr/bin/python3#g" \
         "${APP_DIR}/nzbget.conf" > "${CONFIG_DIR}/app/nzbget.conf"
     chown hotio:hotio "${CONFIG_DIR}/app/nzbget.conf"
 fi
