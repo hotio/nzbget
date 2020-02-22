@@ -1,6 +1,6 @@
 # nzbget
 
-![Logo](https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/img/nzbget.png)  
+<img src="https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/img/nzbget.png" alt="Logo" height="130" width="130">
 
 [![GitHub](https://img.shields.io/badge/source-github-lightgrey)](https://github.com/hotio/docker-nzbget)
 [![Docker Pulls](https://img.shields.io/docker/pulls/hotio/nzbget)](https://hub.docker.com/r/hotio/nzbget)
