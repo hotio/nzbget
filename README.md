@@ -1,6 +1,6 @@
 # nzbget
 
-<img src="https://raw.githubusercontent.com/hotio/docker-nzbget/master/img/nzbget.png" alt="Logo" height="130" width="130">
+<img src="https://hotio.dev/img/nzbget.png" alt="Logo" height="130" width="130">
 
 ![Base](https://img.shields.io/badge/base-alpine-blue)
 [![GitHub](https://img.shields.io/badge/source-github-lightgrey)](https://github.com/hotio/docker-nzbget)
