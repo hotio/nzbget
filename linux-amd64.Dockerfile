@@ -2,7 +2,7 @@ FROM hotio/base@sha256:8b88c1eca2ef3df526f109a37bea2e6148e45e4b7cd7517be1cb8dde8
 
 EXPOSE 6789
 
-RUN apk add --no-cache python3
+RUN apk add --no-cache python3 py3-lxml
 
 # install app
 ARG VERSION
@@ -10,3 +10,4 @@ RUN runfile="/tmp/app.run" && curl -fsSL -o "${runfile}" "https://github.com/nzb
     chmod -R u=rwX,go=rX "${APP_DIR}"
 
 COPY root/ /
+RUN chmod 755 "${APP_DIR}/scripts/"*
