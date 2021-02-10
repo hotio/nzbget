@@ -14,7 +14,7 @@
 # - [PRiVATE]-[WtFnZb]-[5]-[1/filename] - "" yEnc
 #
 #
-#
+# NOTE: This script requires Python with lxml to be installed on your system.
 #
 
 ### NZBGET SCAN SCRIPT
