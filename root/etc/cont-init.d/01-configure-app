@@ -3,13 +3,13 @@
 
 umask "${UMASK}"
 
-rm -f "${CONFIG_DIR}/app/nzbget.lock"
-if [[ ! -f "${CONFIG_DIR}/app/nzbget.conf" ]]; then
-    sed -e "s#\\(MainDir=\\).*#\\1${CONFIG_DIR}/app/downloads#g" \
-        -e "s#\\(QueueDir=\\).*#\\1${CONFIG_DIR}/app/queue#g" \
-        -e "s#\\(LockFile=\\).*#\\1${CONFIG_DIR}/app/nzbget.lock#g" \
-        -e "s#\\(LogFile=\\).*#\\1${CONFIG_DIR}/app/nzbget.log#g" \
+rm -f "${CONFIG_DIR}/nzbget.lock"
+if [[ ! -f "${CONFIG_DIR}/nzbget.conf" ]]; then
+    sed -e "s#\\(MainDir=\\).*#\\1${CONFIG_DIR}/downloads#g" \
+        -e "s#\\(QueueDir=\\).*#\\1${CONFIG_DIR}/queue#g" \
+        -e "s#\\(LockFile=\\).*#\\1${CONFIG_DIR}/nzbget.lock#g" \
+        -e "s#\\(LogFile=\\).*#\\1${CONFIG_DIR}/nzbget.log#g" \
         -e "s#\\(ShellOverride=\\).*#\\1.py=/usr/bin/python3#g" \
-        "${APP_DIR}/nzbget.conf" > "${CONFIG_DIR}/app/nzbget.conf"
-    chown hotio:hotio "${CONFIG_DIR}/app/nzbget.conf"
+        "${APP_DIR}/nzbget.conf" > "${CONFIG_DIR}/nzbget.conf"
+    chown hotio:hotio "${CONFIG_DIR}/nzbget.conf"
 fi
