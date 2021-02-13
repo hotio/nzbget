@@ -3,5 +3,4 @@
 
 umask "${UMASK}"
 
-# shellcheck disable=SC2086
-exec s6-setuidgid hotio "${APP_DIR}/nzbget" --server --option OutputMode=log --configfile "${CONFIG_DIR}/nzbget.conf" ${ARGS}
+exec s6-setuidgid hotio "${APP_DIR}/nzbget" --server --option OutputMode=log --configfile "${CONFIG_DIR}/nzbget.conf"
