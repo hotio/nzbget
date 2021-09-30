@@ -2,7 +2,7 @@ FROM ghcr.io/hotio/base@sha256:f5c1af3194805696f6f7fe2d3b1fd3357396cfaa22ec31917
 
 EXPOSE 6789
 
-RUN apk add --no-cache python3 py3-lxml openssl
+RUN apk add --no-cache python3 py3-lxml
 
 # install app
 ARG VERSION
