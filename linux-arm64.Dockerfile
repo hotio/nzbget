@@ -12,4 +12,6 @@ RUN runfile="/tmp/app.run" && curl -fsSL -o "${runfile}" "https://github.com/nzb
     chown -R root:root "${APP_DIR}"
 
 COPY root/ /
+RUN chmod -R +x /etc/cont-init.d/ /etc/services.d/
+
 RUN chmod 755 "${APP_DIR}/scripts/"*
