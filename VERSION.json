@@ -1,6 +1,8 @@
 {
   "description": "Releases",
   "latest": true,
+  "test_amd64": true,
+  "test_arm64": true,
   "test_url": "http://nzbget:tegbzn6789@localhost:6789",
   "upstream_digest_amd64": "sha256:9148bd5af7b67646882351563e8d917f05f1d67e14b9c632b19d613cf28bd415",
   "upstream_digest_arm64": "sha256:188ae19dd13c8fa837e3552e54e0e0116cb9ac370fbeb842bf71a1cadd914dd5",
