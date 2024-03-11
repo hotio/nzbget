@@ -20,6 +20,6 @@ if [[ ! -f "${CONFIG_DIR}/nzbget.conf" ]]; then
         -e "s#\\(ShellOverride=\\).*#\\1.py=/usr/bin/python3#g" \
         -e "s#\\(UnrarCmd=\\).*#\\1unrar#g" \
         -e "s#\\(SevenZipCmd=\\).*#\\17z#g" \
-        "${APP_DIR}/nzbget.conf" > "${CONFIG_DIR}/nzbget.conf"
+        "${APP_DIR}/bin/nzbget.conf" > "${CONFIG_DIR}/nzbget.conf"
     chown hotio:hotio "${CONFIG_DIR}/nzbget.conf"
 fi
