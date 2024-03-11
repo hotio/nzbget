@@ -1,9 +1,6 @@
 #!/bin/bash
-
-version=$(curl -u "${GITHUB_ACTOR}:${GITHUB_TOKEN}" -fsSL "https://api.github.com/repos/nzbget/nzbget/releases/latest" | jq -r .tag_name | sed s/v//g)
-[[ -z ${version} ]] && exit 0
-old_version=$(jq -r '.version' < VERSION.json)
-changelog=$(jq -r '.changelog' < VERSION.json)
-[[ "${old_version}" != "${version}" ]] && changelog="https://github.com/nzbget/nzbget/compare/v${old_version}...v${version}"
-version_json=$(cat ./VERSION.json)
-jq '.version = "'"${version}"'" | .changelog = "'"${changelog}"'"' <<< "${version_json}" > VERSION.json
+version=$(curl -u "${GITHUB_ACTOR}:${GITHUB_TOKEN}" -fsSL "https://api.github.com/repos/nzbgetcom/nzbget/releases/latest" | jq -re .tag_name) || exit 1
+json=$(cat VERSION.json)
+jq --sort-keys \
+    --arg version "${version//v/}" \
+    '.version = $version' <<< "${json}" | tee VERSION.json

@@ -3,6 +3,14 @@
 
 umask "${UMASK}"
 
+echo "
+----------------------------------------------------------------------
+ENVIRONMENT APP
+----------------------------------------------------------------------
+WEBUI_PORTS=${WEBUI_PORTS}
+----------------------------------------------------------------------
+"
+
 rm -f "${CONFIG_DIR}/nzbget.lock"
 if [[ ! -f "${CONFIG_DIR}/nzbget.conf" ]]; then
     sed -e "s#\\(MainDir=\\).*#\\1${CONFIG_DIR}/downloads#g" \
