@@ -15,6 +15,8 @@ RUN runfile="/tmp/app.run" && \
     sh "${runfile}" --destdir "${APP_DIR}/bin" && \
     rm "${runfile}" && \
     rm -rf "${APP_DIR}/bin/unrar" "${APP_DIR}/bin/7za" && \
+    ln -s /usr/bin/unrar "${APP_DIR}/bin/unrar" && \
+    ln -s /usr/bin/7z "${APP_DIR}/bin/7za" && \
     chmod -R u=rwX,go=rX "${APP_DIR}/bin" && \
     chown -R root:root "${APP_DIR}/bin"
 
