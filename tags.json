@@ -2,13 +2,13 @@
   "release": {
     "description": "Releases",
     "hide": false,
-    "last_updated": "2025-01-18T09:07:51.000Z",
-    "last_updated_url": "https://github.com/hotio/nzbget/actions/runs/12842617885",
+    "last_updated": "2025-02-14T21:32:39.000Z",
+    "last_updated_url": "https://github.com/hotio/nzbget/actions/runs/13337665635",
     "latest": true,
     "tags": [
       "release",
       "release-24.5",
-      "release-577ce68"
+      "release-9f4b3ab"
     ]
   }
 }
