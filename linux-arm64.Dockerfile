@@ -6,7 +6,7 @@ EXPOSE 6789
 ARG IMAGE_STATS
 ENV IMAGE_STATS=${IMAGE_STATS} WEBUI_PORTS="6789/tcp,6789/udp"
 
-RUN apk add --no-cache py3-lxml
+RUN apk add --no-cache py3-lxml lscpu
 
 ARG VERSION
 RUN runfile="/tmp/app.run" && \
@@ -21,5 +21,3 @@ RUN runfile="/tmp/app.run" && \
     chown -R root:root "${APP_DIR}/bin"
 
 COPY root/ /
-
-RUN chmod 755 "${APP_DIR}/bin/scripts/"*
