@@ -21,3 +21,4 @@ RUN runfile="/tmp/app.run" && \
     chown -R root:root "${APP_DIR}/bin"
 
 COPY root/ /
+RUN find /etc/s6-overlay/s6-rc.d -name "run*" -execdir chmod +x {} +
