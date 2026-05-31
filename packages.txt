@@ -1,5 +1,5 @@
 libsmartcols=2.41.4-r0
-libxml2=2.13.9-r0
+libxml2=2.13.9-r1
 libxslt=1.1.43-r3
 lscpu=2.41.4-r0
 py3-lxml-pyc=6.0.2-r1
